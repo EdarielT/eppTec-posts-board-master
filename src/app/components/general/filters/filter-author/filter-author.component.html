@@ -1,0 +1,32 @@
+<div class="dropdown">
+  <button
+    class="btn btn-outline-light dropdown-toggle"
+    type="button"
+    id="dropdownMenu2"
+    data-bs-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+    [(ngModel)]="authors"
+    (change)="onChange()"
+  >
+    {{ filterAuthor ? filterAuthor.name : "All authors" }}
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button
+      class="dropdown-item"
+      type="button"
+      (click)="filterAuthor = undefined"
+    >
+      All authors
+    </button>
+    <div class="dropdown-divider"></div>
+    <button
+      *ngFor="let author of authors"
+      class="dropdown-item"
+      type="button"
+      (click)="filterAuthor = author"
+    >
+      {{ author?.name }}
+    </button>
+  </div>
+</div>

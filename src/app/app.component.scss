@@ -1,0 +1,21 @@
+@import "../styles.scss";
+
+* {
+  background-color: $backgroundColor;
+}
+
+.top-bar {
+  height: $barsHeight;
+  width: 100%;
+  padding: 3px;
+}
+
+.top-bar__tittle {
+  color: $lightBlue;
+  text-align: right;
+  margin-right: 25px;
+}
+
+.footer {
+  height: $barsHeight;
+}

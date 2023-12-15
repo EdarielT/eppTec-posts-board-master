@@ -1,0 +1,39 @@
+@import "../../../../styles.scss";
+
+* {
+  background: linear-gradient(
+    to right,
+    $backgroundColor,
+    #0f0753,
+    $lightBackgroundColor,
+    #0f0753,
+    $backgroundColor
+  );
+}
+
+.card {
+  margin: 0 25px;
+  border: solid #ebb4c5 0.5px;
+}
+
+.card-header {
+  background: linear-gradient(to right, $headersColor, #ebb4c5);
+  font-size: $headerFontSize;
+  font-weight: $boldHeaderText;
+  color: $backgroundColor;
+}
+
+.posts-list--no-result {
+  width: 100%;
+  text-align: center;
+  font-size: $secondaryHeadersSize;
+  font-weight: 500;
+  color: $lightBlue;
+}
+
+.found-results__text {
+  color: $lightBlue;
+  font-size: $secondaryHeadersSize;
+  margin: 10px 0;
+  text-align: right;
+}

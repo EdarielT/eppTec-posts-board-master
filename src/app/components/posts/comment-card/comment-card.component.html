@@ -1,0 +1,10 @@
+<div class="card" *ngIf="comment">
+  <div class="card-header">
+    {{ comment.id }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ comment.name }}</h5>
+    <p class="card-text">{{ comment.body }}</p>
+    <div class="comment__author">{{ username }}</div>
+  </div>
+</div>

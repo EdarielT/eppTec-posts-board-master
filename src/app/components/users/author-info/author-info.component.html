@@ -1,0 +1,25 @@
+<div class="card" style="width: 15rem" *ngIf="author">
+  <div class="card-header">
+    {{ author.name }}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item username">
+      <span class="key">Username:</span> {{ author.username }}
+    </li>
+    <li class="list-group-item address">
+      <span class="key">City:</span> {{ author.address.city }}
+    </li>
+    <li class="list-group-item email">
+      <span class="key">E-mail:</span> {{ author.email }}
+    </li>
+    <li class="list-group-item phone">
+      <span class="key">Phone No.:</span> {{ author.phone }}
+    </li>
+    <li class="list-group-item website">
+      <span class="key">Website:</span> {{ author.website }}
+    </li>
+    <li class="list-group-item company">
+      <span class="key">Company:</span> {{ author.company.name }}
+    </li>
+  </ul>
+</div>

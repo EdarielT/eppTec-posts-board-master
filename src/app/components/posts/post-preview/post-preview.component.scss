@@ -1,0 +1,27 @@
+@import "../../../../styles.scss";
+
+.text-truncate {
+  max-width: 500px;
+}
+
+.card-title {
+  color: rgb(117, 28, 199);
+}
+
+.author-comment-container {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: $backgroundColor;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.06);
+}

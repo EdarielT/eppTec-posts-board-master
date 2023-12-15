@@ -1,0 +1,21 @@
+@import "../../../../styles.scss";
+
+.card-header {
+  font-size: $secondaryHeadersSize;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone {
+  text-align: right;
+  & span {
+    text-align: left;
+  }
+}
+
+.key {
+  font-weight: 600;
+}

@@ -1,0 +1,11 @@
+<div class="search__container">
+    <div class="search__label">Search by {{ searchBy }}:</div>
+    <div class="search__input">
+      <input
+        type="text"
+        [(ngModel)]="searchInput"
+        (input)="onChange()"
+        placeholder="Start typing..."
+      />
+    </div>
+</div>

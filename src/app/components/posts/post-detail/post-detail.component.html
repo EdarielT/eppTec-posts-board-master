@@ -1,0 +1,18 @@
+<div class="detail-post-card">
+  <div class="card" *ngIf="post">
+    <div class="card-header">{{ post.title }}</div>
+    <div class="card-body">
+      <p class="card-text">{{ post.body }}</p>
+      <et-author-info [author]="author"></et-author-info>
+    </div>
+    <div class="card-footer text-muted">
+      <back-button></back-button>
+    </div>
+  </div>
+  <et-comment-card
+    *ngFor="let comment of comments"
+    [comment]="comment"
+    [username]="getCommentAuthor(comment.id)"
+  >
+  </et-comment-card>
+</div>

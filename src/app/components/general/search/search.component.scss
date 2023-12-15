@@ -1,0 +1,18 @@
+@import "../../../../styles.scss";
+
+.search__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+
+.search__input input {
+  width: 200%;
+  background: $cardHeaderGradient;
+}
+
+.search__label {
+  color: $lightBlue;
+  font-size: $secondaryHeadersSize;
+}

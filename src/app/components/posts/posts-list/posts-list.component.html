@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">Posts Board</div>
+  <div class="card-body">
+    <et-search
+      [searchBy]="'post title'"
+      (notify)="filterPostsBySearchInput($event)"
+    >
+    </et-search>
+    <et-filter-author
+      [authors]="users"
+      (notify)="filterPostsByAuthorId($event)"
+    ></et-filter-author>
+    <div class="row">
+      <div class="col-md-6">
+        <h4 class="found-results__text">
+          Found {{ filteredPosts.length }} results
+        </h4>
+      </div>
+    </div>
+    <div
+      class="row row-cols-1 row-cols-md-3 g-4"
+      *ngIf="filteredPosts.length; else noResults"
+    >
+      <div class="col" *ngFor="let post of filteredPosts">
+        <et-post-preview
+          [post]="post"
+          [authorName]="authorName(post.userId)"
+          [numberOfComments]="postComments(post.id).length"
+        >
+        </et-post-preview>
+      </div>
+    </div>
+    <ng-template #noResults
+      ><div class="posts-list--no-result">
+        No results are found
+      </div></ng-template
+    >
+  </div>
+</div>
